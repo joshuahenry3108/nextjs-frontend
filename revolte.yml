@@ -3,7 +3,7 @@ revolte:
   project: Cloud
   appName: computing-app
   env:
-    qa:
+    staging:
       branch: dev
       services:
         rid_1:
