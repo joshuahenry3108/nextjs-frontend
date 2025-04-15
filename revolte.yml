@@ -3,16 +3,28 @@ revolte:
   project: Cloud
   appName: computing-app
   env:
-    preview:
-      branch: main
+    qa:
+      branch: dev
       services:
         rid_1:
-          name: web-app
-          type: WEB_APP
+          name: web-service
+          type: WEB_SERVICE
           entryPoint: index.js
-          domain: fe.revolte.com
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
           properties:
-            indexPage: index.html
-            errorPage: error.html
+            health: /health
+            port: 3000
             variables:
-              API_URL: /api/v1
+              BASE_URL: /api/v1
+              DATABASE_URL: '#{dbConnectionString}'
+        rid_2:
+          name: db
+          type: DATABASE
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+            engine: postgres
