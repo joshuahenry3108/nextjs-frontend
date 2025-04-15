@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o dist"
+    "build": "next build && next export -o dist",
     "start": "npm run migrate && next start",
     "lint": "next lint",
     "generate": "npx prisma generate",
