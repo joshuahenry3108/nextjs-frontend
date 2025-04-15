@@ -1,0 +1,29 @@
+{
+  "name": "revolte-nextjs-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npm run migrate && next start",
+    "lint": "next lint",
+    "generate": "npx prisma generate",
+    "migrate": "npx prisma migrate dev --name init"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "next": "15.3.0",
+    "pg": "^8.14.1",
+    "prisma": "^6.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
