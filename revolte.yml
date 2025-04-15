@@ -1,0 +1,18 @@
+revolte:
+  version: '1.0'
+  project: Cloud
+  appName: computing-app
+  env:
+    production:
+      branch: main
+      services:
+        rid_1:
+          name: web-app
+          type: WEB_APP
+          entryPoint: index.js
+          domain: fe.revolte.com
+          properties:
+            indexPage: index.html
+            errorPage: error.html
+            variables:
+              API_URL: /api/v1
